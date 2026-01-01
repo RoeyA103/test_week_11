@@ -21,7 +21,7 @@ spec:
     image: {your user name}/myapp:latest
 
 
-# check if it working
+# start pod
 kubectl apply -f pod.yaml
 
 # check if it working
@@ -29,3 +29,5 @@ kubectl get pods
 
 # check status
 kubectl logs streamlit
+or
+kubectl describe pod streamlit
