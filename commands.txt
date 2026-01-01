@@ -152,6 +152,12 @@ git commit -m "adding screenshot + readme"
 git push origin screenshot
 
 
- 
+ # merging all branches
+git checkout main
+git merge podyaml
+git merge .....
+git commit -m "merging all branches"
+git push origin main
+
 
 
