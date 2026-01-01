@@ -14,11 +14,14 @@ spec:
     - port: 8080
       targetPort: 8080
 
-#start the service
+# start the service
 kubectl apply -f service.yaml
 
 # check if it working
 kubectl get svc
 
-#expose the service to the host with minikube
+# for more info
+kubectl describe service streamlit
+
+# expose the service to the host with minikube
 minikube service streamlit
