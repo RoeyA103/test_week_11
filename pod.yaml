@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name : streamlit
+  labels:
+    app: pod-app
+spec:
+  containers:
+  - name: streamlit
+    image: roeyaverbuch/myapp:latest
