@@ -102,3 +102,56 @@ kubectl get pods
 
 # check status
 kubectl logs {pod name}
+
+#save and commit and push changes
+
+git add . 
+git commit -m "your massage"
+git push origin podyaml
+
+# create service branch
+git branch serviceyaml
+
+# change to new branch
+git checkout serviceyaml
+
+# create service.yaml
+
+echo "" > service.yaml
+
+# Enter the following content
+apiVersion: v1
+kind: Service
+metadata:
+    name: streamlit
+spec:
+    selector:
+        app: pod-app
+    ports:
+    - port: 8080
+      targetPort: 8080
+
+#start the service
+kubectl apply -f service.yaml
+
+# check if it working
+kubectl get svc
+
+#expose the service to the host with minikube
+minikube service streamlit
+
+#create screenshoe branch
+git branch screenshot
+
+#change to the new branch
+git checkout screenshot
+
+#afterr adding the screenshot + readme file
+git add .
+git commit -m "adding screenshot + readme"
+git push origin screenshot
+
+
+ 
+
+
