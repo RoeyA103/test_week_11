@@ -20,5 +20,5 @@ kubectl apply -f service.yaml
 # check if it working
 kubectl get svc
 
-#expose the service to the host with minikube
+# expose the service to the host with minikube
 minikube service streamlit
